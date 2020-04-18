@@ -21,7 +21,7 @@ export const reducer = (state = initialState, action) => {
       return { ...state, selectedTopicId: action.topicId };
     case GET_ANSWER_SUCCESS:
       topic = state.topics.find(t => t.id === action.topicId);
-      question = topic?.questions?.find(q => q.id === action.questionId);
+      question = topic.questions.find(q => q.id === action.questionId);
       return {
         ...state,
         topics: [

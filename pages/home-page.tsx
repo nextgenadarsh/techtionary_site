@@ -10,7 +10,7 @@ const HomePage = ({ history, state, dispatch }) => {
     if (state.selectedTopicId !== topic.id) {
       changeTopicAction(dispatch, topic.id);
       const selectedTopic = topics.find(t => t.id === topic.id);
-      if (selectedTopic && selectedTopic.questions?.length < 1) {
+      if (selectedTopic && selectedTopic.questions.length < 1) {
         getQuestions(dispatch, topic.id);
       }
       

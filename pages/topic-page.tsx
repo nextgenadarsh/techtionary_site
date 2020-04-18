@@ -10,7 +10,7 @@ const TopicPage = ({ history, state, dispatch }) => {
   const topic = topics.find(t => t.id === state.selectedTopicId);
 
   const handleQuestionSelect = (questionId) => {
-    const foundQuestion = topic.questions?.find(q => q.id === questionId);
+    const foundQuestion = topic.questions.find(q => q.id === questionId);
     if(!foundQuestion.answer) {
       getAnswerAction(dispatch, {
         topicId: selectedTopicId,
@@ -21,6 +21,7 @@ const TopicPage = ({ history, state, dispatch }) => {
   };
   
   const questions = topic ? topic.questions : [];
+
   return (
     <div className="tech-topic-page">
       <div className="header">
@@ -28,7 +29,7 @@ const TopicPage = ({ history, state, dispatch }) => {
           Back
         </button>
       </div>
-      <h3 align="center">{topic?.label}</h3>
+      <h3 align="center">{topic.label}</h3>
       {questions
         .sort((a, b) => (a.id > b.id ? 1 : -1))
         .map(question => (

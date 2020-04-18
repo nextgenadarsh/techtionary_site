@@ -15,7 +15,7 @@ export default function App() {
 
   useEffect(() => {
     initializeAction(dispatch);
-    if (state?.topics.length < 1) {
+    if (state.topics.length < 1) {
       getTopicsAction(dispatch);
     }
   });
