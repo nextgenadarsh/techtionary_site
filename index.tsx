@@ -1,31 +1,10 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
+import * as React from "react";
+import { render } from "react-dom";
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
+import "./theme.css";
+import "./styles.css";
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React'
-    };
-  }
+import App from "./App";
 
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById("root");
+render(<App />, rootElement);

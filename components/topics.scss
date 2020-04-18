@@ -1,0 +1,24 @@
+
+.topics-container {
+  display: flex;
+  /* flex-flow: column; */
+}
+
+.topic-container {
+  font-weight: 400;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 7px;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 15px 5px 15px;
+}
+
+.topic-icon {
+  height: 30px;
+}
+
+button {
+  border: none;
+}
